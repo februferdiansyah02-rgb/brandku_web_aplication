@@ -6,7 +6,7 @@ const Hero = ({ title, subtitle, buttonText, onTap }) => {
     <section className="hero" id="beranda">
       <div className="container hero__inner">
         <div className="hero__content">
-          <span className="eyebrow">Platform Bisnis</span>
+          <span className="eyebrow text-6xl font-[Anton]">Platform Bisnis</span>
 
           <h1 className="hero__title">{title}</h1>
           <p className="hero__subtitle">{subtitle}</p>
