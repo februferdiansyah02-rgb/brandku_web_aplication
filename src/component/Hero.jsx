@@ -1,33 +1,22 @@
-import heroImage from "../assets/hero.png";
-import "./Hero.css";
+import { useState } from "react";
+import CardGrid from "./CardGrid";
 
-const Hero = ({ title, subtitle, buttonText, onTap }) => {
-  return (
-    <section className="hero" id="beranda">
-      <div className="container hero__inner">
-        <div className="hero__content">
-          <span className="eyebrow text-6xl font-[Anton]">Platform Bisnis</span>
 
-          <h1 className="hero__title">{title}</h1>
-          <p className="hero__subtitle">{subtitle}</p>
-
-          <div className="hero__actions">
-            <button type="button" className="btn btn--primary" onClick={onTap}>
-              {buttonText}
-            </button>
-            <a href="#fitur" className="btn btn--ghost">
-              Lihat Fitur
-            </a>
-          </div>
-
-          <p className="hero__note">
-            Gratis 14 hari · Tanpa kartu kredit · Batal kapan saja
-          </p>
-        </div>
-       
-      </div>
-    </section>
-  );
-};
-
+function Hero (features){
+    const [angka,setAngka] = useState(0)
+    return (
+       <section className="bg-slate-50 py-20 px-8 text-center">
+      <h1 className="text-5xl font-extrabold text-slate-900 mb-6 font-[Anton]">Solusi Terbaik untuk Bisnismu</h1>
+      <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
+        Platform all-in-one untuk manajemen, pemasaran, dan pertumbuhan bisnis kecil.
+      </p>
+      <button
+      onClick={() => setAngka(angka+10)} 
+        className="bg-pink-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-pink-900 transition"
+      >
+        Klik button ini : {angka}
+      </button>
+    </section>   
+    )
+}
 export default Hero;

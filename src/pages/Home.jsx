@@ -1,19 +1,26 @@
 import CardGrid from "../component/CardGrid";
-import Hero from "../component/Hero";
+import Hero from "../component/Hero"
 
-const Home = ({ features }) => {
-  return (
-    <>
-      <Hero
-        title="Solusi Terbaik untuk Bisnismu"
-        subtitle="Platform all-in-one untuk manajemen, pemasaran, dan pertumbuhan bisnis kecil."
-        buttonText="Mulai Gratis"
-        onTap={() => console.log("Button clicked!")}
-      />
+const Home = ({features}) => {
 
-      {/* <CardGrid features={features} /> */}
-    </>
-  );
-};
+  return(
+    <main>
+      <h1>Home</h1>
+
+      <section>
+         <Hero/>
+      </section>
+      <CardGrid features={features}/>
+
+      <section>
+        
+      </section>
+    </main>
+  )
+
+
+
+
+}
 
 export default Home;

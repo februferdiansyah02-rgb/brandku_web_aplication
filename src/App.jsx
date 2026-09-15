@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Header from "./component/Header";
@@ -7,12 +6,9 @@ import Footer from "./component/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Pricing from "./pages/Pricing";
-
 import { featureData } from "./data/features";
 
 const App = () => {
-  const [features] = useState(featureData);
-
   return (
     <BrowserRouter>
       <Header />
@@ -21,14 +17,12 @@ const App = () => {
         <Routes>
           <Route
             path="/"
-            element={<Home features={features} />}
+            element={<Home features={featureData} />}
           />
-
           <Route
             path="/about"
             element={<About />}
           />
-
           <Route
             path="/pricing"
             element={<Pricing />}
